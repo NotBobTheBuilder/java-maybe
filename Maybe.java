@@ -2,22 +2,14 @@ public class Maybe<T> {
     private final T data;
     private final boolean none;
 
-    private Maybe() {
+    public Maybe() {
         this.data = null;
         this.none = true;
     }
 
-    private Maybe(T data) {
+    public Maybe(T data) {
         this.data = data;
         this.none = false;
-    }
-
-    public static <T> Maybe<T> some(T data) {
-        return new Maybe<T>(data);
-    }
-
-    public static <T> Maybe<T> none() {
-        return new Maybe<T>();
     }
 
     public boolean isSome() {
